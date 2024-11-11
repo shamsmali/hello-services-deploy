@@ -14,7 +14,7 @@ spec:
         app: hello-service-a
     spec:
       containers:  
-        - image: shamsmali/hello-service-a:2.0.2
+        - image: shamsmali/hello-service-a:2.0.4
           name: hello-service-a
           ports:
             - containerPort: 8080
