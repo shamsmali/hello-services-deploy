@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: hello-services-qa-appset
+  name: hello-services-dev-appset
   namespace: argocd
 spec:
   goTemplate: true
