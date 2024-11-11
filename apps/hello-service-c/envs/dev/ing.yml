@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-hello-service-a
+  name: ingress-hello-service-c
 spec:
   ingressClassName: nginx
   rules:
