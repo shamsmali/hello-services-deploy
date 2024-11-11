@@ -10,4 +10,4 @@ spec:
       - name: hello-service-a
         env:
         - name: env
-          value: "DEV"
+          value: "PROD"
