@@ -14,7 +14,7 @@ spec:
         app: hello-service-b
     spec:
       containers:  
-        - image: shamsmali/hello-service-b:2.0.1
+        - image: shamsmali/hello-service-b:2.0.2
           name: hello-service-b
           ports:
             - containerPort: 8080
