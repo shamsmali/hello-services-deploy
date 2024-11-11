@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-hello-service-c
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /hello-service-c
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-service-c
+                port:
+                  number: 80

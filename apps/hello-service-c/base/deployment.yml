@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-service-a
+  name: hello-service-c
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: hello-service-a
+      app: hello-service-c
   template:
     metadata:
       labels:
-        app: hello-service-a
+        app: hello-service-c
     spec:
       containers:  
-        - image: shamsmali/hello-service-a:2.0.1
-          name: hello-service-a
+        - image: shamsmali/hello-service-c:2.0.1
+          name: hello-service-c
           ports:
             - containerPort: 8080
           readinessProbe:
