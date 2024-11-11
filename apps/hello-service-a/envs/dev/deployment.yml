@@ -2,12 +2,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-services-a
+  name: hello-service-a
 spec:
   template:
     spec:
       containers:
-      - name: hello-services-a
+      - name: hello-service-a
         env:
         - name: ENV
           value: "DEV"

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-services-a
+  name: hello-service-a
 spec:
   selector:
-    app: hello-services-a
+    app: hello-service-a
   ports:
     - protocol: TCP
       port: 80
