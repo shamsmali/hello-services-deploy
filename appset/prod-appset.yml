@@ -11,7 +11,8 @@ spec:
       repoURL: https://github.com/shamsmali/hello-services-deploy.git
       revision: HEAD
       directories:
-      - path: apps/*/envs/prod   
+      - path: apps/*/envs/prod-us   
+      - path: apps/*/envs/prod-aus
   template:      
     metadata:
       name: '{{index .path.segments 1}}-{{index .path.segments 3}}'     
