@@ -14,7 +14,7 @@ spec:
     # Do not allow any app to be installed in `kube-system`  
     - namespace: '!kube-system'
       server: '*'
-    - namespace: '*hello-services*'
+    - namespace: '*hello-service*'
       server: '*'
   clusterResourceWhitelist:
   - group: ''
