@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+
+metadata:
+  name: hello-services
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+
+spec:
+  sourceRepos:
+    - https://github.com/shamsmali/hello-services-deploy.git
+  destinations:
+    # Do not allow any app to be installed in `kube-system`  
+    - namespace: '!kube-system'
+      server: '*'
+    - namespace: '*hello-services*'
+      server: '*'
+  clusterResourceWhitelist:
+  - group: ''
+    kind: Namespace

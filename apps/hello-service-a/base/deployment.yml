@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-services-a
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-services-a
+  template:
+    metadata:
+      labels:
+        app: hello-services-a
+    spec:
+      containers:  
+        - image: shamsmali/hello-services-a:2.0.0
+          name: hello-services-a
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
