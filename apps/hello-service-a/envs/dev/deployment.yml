@@ -9,5 +9,5 @@ spec:
       containers:
       - name: hello-service-a
         env:
-        - name: ENV
+        - name: env
           value: "DEV"
