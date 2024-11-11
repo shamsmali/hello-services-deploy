@@ -7,3 +7,4 @@ resources:
 
 patchesStrategicMerge:
 - deployment.yml
+- ing.yml
