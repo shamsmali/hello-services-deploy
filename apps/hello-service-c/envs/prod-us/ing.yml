@@ -7,7 +7,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /hello-service-c
+          - path: /us/hello-service-c
             pathType: Prefix
             backend:
               service:
