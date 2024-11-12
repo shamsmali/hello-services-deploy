@@ -12,6 +12,6 @@ spec:
         - name: "service_a_host"
           value: "10.100.172.59"
         - name: "service_a_port"
-          value: "30185"
+          value: "32127"
         - name: env
           value: "dev"
