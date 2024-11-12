@@ -10,7 +10,7 @@ spec:
       - name: hello-service-client
         env:
         - name: "service_a_host"
-          value: "192.168.0.100"
+          value: "ingress-nginx-controller.ingress-nginx.svc.cluster.local"
         - name: "service_a_port"
           value: "30185"
         - name: env
