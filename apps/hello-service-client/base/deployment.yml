@@ -15,4 +15,4 @@ spec:
     spec:
       containers:  
         - image: shamsmali/hello-service-client:1.0.0
-          name: hello-service-a
+          name: hello-service-client
