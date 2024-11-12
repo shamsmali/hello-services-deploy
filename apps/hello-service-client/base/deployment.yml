@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-service-client
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-service-client
+  template:
+    metadata:
+      labels:
+        app: hello-service-client
+    spec:
+      containers:  
+        - image: shamsmali/hello-service-client:1.0.0
+          name: hello-service-a
