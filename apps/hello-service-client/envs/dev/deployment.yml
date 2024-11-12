@@ -9,5 +9,7 @@ spec:
       containers:
       - name: hello-service-client
         env:
-        - name: env
-          value: "DEV"
+        - name: service-a-host
+          value: "hello-service-a"
+        - name: service-a-port
+          value: "30185"

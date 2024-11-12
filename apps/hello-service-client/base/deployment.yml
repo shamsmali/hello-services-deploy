@@ -14,5 +14,5 @@ spec:
         app: hello-service-client
     spec:
       containers:  
-        - image: shamsmali/hello-service-client:1.0.0
+        - image: shamsmali/hello-service-client:1.0.1
           name: hello-service-client
