@@ -9,9 +9,9 @@ spec:
       containers:
       - name: hello-service-client
         env:
-        - name: service_a_host
+        - name: "service_a_host"
           value: "hello-service-a"
-        - name: service_a_port
+        - name: "service_a_port"
           value: "30185"
         - name: env
           value: "dev"
