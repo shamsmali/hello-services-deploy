@@ -10,8 +10,8 @@ spec:
       - name: hello-service-client
         env:
         - name: "service_a_host"
-          value: "10.100.172.59"
+          value: "192.168.0.100"
         - name: "service_a_port"
-          value: "32127"
+          value: "30185"
         - name: env
           value: "dev"
