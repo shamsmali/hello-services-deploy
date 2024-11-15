@@ -29,3 +29,69 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 10
             timeoutSeconds: 5
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-service-a-canary
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-service-a-canary
+  template:
+    metadata:
+      labels:
+        app: hello-service-a-canary
+    spec:
+      containers:  
+        - image: shamsmali/hello-service-a:2.0.4
+          name: hello-service-a-canary
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-service-a-stable
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-service-a-stable
+  template:
+    metadata:
+      labels:
+        app: hello-service-a-stable
+    spec:
+      containers:  
+        - image: shamsmali/hello-service-a:2.0.4
+          name: hello-service-a-stable
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5

@@ -8,3 +8,5 @@ resources:
 patchesStrategicMerge:
 - deployment.yml
 - ing.yml
+- rollouts.yml
+- service.yml
