@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
 - deployment.yml
 - service.yml
+- rollouts.yml
 - ing.yml
