@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: hello-service-a-rollout
+spec:
+  replicas: 1
+  strategy:
+    canary:
+      canaryService: hello-service-a-canary
+      stableService: hello-service-a-stable
+      trafficRouting:
+        nginx:
+          stableIngress: hello-service-a-stable
+      steps:
+      - setWeight: 5
+      - pause: {}
+  revisionHistoryLimit: 2
