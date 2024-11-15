@@ -9,3 +9,29 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service-a-canary
+spec:
+  selector:
+    app: hello-service-a-canary
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service-a-stable
+spec:
+  selector:
+    app: hello-service-a-stable
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
