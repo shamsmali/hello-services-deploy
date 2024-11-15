@@ -11,3 +11,32 @@ spec:
         env:
         - name: env
           value: "DEV"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-service-a-canary
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-service-a-canary
+        env:
+        - name: env
+          value: "DEV"
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-service-a-stable
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-service-a-stable
+        env:
+        - name: env
+          value: "DEV"
