@@ -29,6 +29,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hello-service-a-rollout
+                name: hello-service-a-stable
                 port:
                   number: 80
